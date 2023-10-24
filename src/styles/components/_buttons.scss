@@ -1,0 +1,25 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; //para não quebrar a linha no display flex ele força a linha, para quebrar a linho no flex eu utilizo flex-wrap:wrap
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$purple;
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+}
